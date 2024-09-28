@@ -148,7 +148,7 @@ class GoveeAPILight(LightEntity, dict):
         if ATTR_BRIGHTNESS in kwargs:
             brightness = kwargs.get(ATTR_BRIGHTNESS, 255)
             self._brightness = brightness
-            await self.hub.api.set_brightness(self.sku, self.device, (brightness / 255) * 100)
+            await self.hub.api.set_brightness(self.sku, self.device, brightness)
 
         if ATTR_RGB_COLOR in kwargs:
             red, green, blue = kwargs.get(ATTR_RGB_COLOR)
