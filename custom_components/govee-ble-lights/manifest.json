@@ -1,6 +1,6 @@
 {
     "domain": "govee-ble-lights",
-    "name": "Govee BLE Light Advanced",
+    "name": "Govee H7015 Controlling",
     "integration_type": "hub",
     "bluetooth": [
         { "local_name": "Govee_*", "connectable": false },
