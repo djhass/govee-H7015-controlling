@@ -146,7 +146,7 @@ class GoveeAPILight(LightEntity, dict):
         self._state = True
 
         if ATTR_BRIGHTNESS in kwargs:
-            brightness = kwargs.get(ATTR_BRIGHTNESS, 255)
+            brightness = kwargs.get(ATTR_BRIGHTNESS, 100)
             self._brightness = brightness
             await self.hub.api.set_brightness(self.sku, self.device, brightness)
 
@@ -234,7 +234,7 @@ class GoveeBluetoothLight(LightEntity):
         self._state = True
 
         if ATTR_BRIGHTNESS in kwargs:
-            brightness = kwargs.get(ATTR_BRIGHTNESS, 255)
+            brightness = kwargs.get(ATTR_BRIGHTNESS, 100)
             commands.append(self._prepareSinglePacketData(LedCommand.BRIGHTNESS, [brightness]))
             self._brightness = brightness
 
